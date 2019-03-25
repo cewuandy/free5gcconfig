@@ -48,7 +48,7 @@ class Free5GCConfigInstancePolicy(Policy):
                     print(exc)
 
             name = "free5gc-config-%s" % service_instance.id
-            instance = KubernetesResourceInstance(name=name, owner=owner,
+            global instance = KubernetesResourceInstance(name=name, owner=owner,
                                               resource_definition=resource_definition,
                                               no_sync=False)
 
