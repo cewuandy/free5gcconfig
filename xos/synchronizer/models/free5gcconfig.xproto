@@ -1,0 +1,10 @@
+option app_label = "free5gcconfig";
+option name = "free5gcconfig";
+
+message Free5GCConfig (Service){
+    option verbose_name = "Free5GCConfig";
+}
+
+message Free5GCConfigInstance (ServiceInstance){
+    option verbose_name = "Free5GCConfigInstance";
+}
