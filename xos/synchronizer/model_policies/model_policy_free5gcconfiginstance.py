@@ -36,7 +36,7 @@ class Free5GCConfigInstancePolicy(Policy):
         log.info("handle_update Free5GCConfigPolicy")
         owner = KubernetesService.objects.first()
 
-        yaml_file = ["nextepc-configmap.conf", "nextepc-freediameter-configmap.yaml", "free5gc-configmap.yaml", "free5gc-freediameter-configmap.yaml"]
+        yaml_file = ["nextepc-configmap.yaml", "nextepc-freediameter-configmap.yaml", "free5gc-configmap.yaml", "free5gc-freediameter-configmap.yaml"]
         for file in yaml_file:
             input_file=os.path.join(os.path.abspath(os.path.dirname(os.path.realpath(__file__))), file)
             with open(input_file, 'r') as stream:
