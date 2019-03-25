@@ -47,12 +47,12 @@ class Free5GCConfigInstancePolicy(Policy):
                     resource_definition="{}"
                     print(exc)
 
-        name = "free5gc-config-%s" % service_instance.id
-        instance = KubernetesResourceInstance(name=name, owner=owner,
+            name = "free5gc-config-%s" % service_instance.id
+            instance = KubernetesResourceInstance(name=name, owner=owner,
                                               resource_definition=resource_definition,
                                               no_sync=False)
 
-        instance.save()
+            instance.save()
 
     def handle_delete(self, service_instance):
         log.info("handle_delete Free5GCConfigPolicy")
